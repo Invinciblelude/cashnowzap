@@ -549,6 +549,59 @@ body {
 .trust-name { font-size: 0.9rem; font-weight: 700; color: var(--text); }
 .trust-sep { color: var(--text2); font-size: 0.6rem; }
 
+/* INQUIRY FORM */
+.form-wrapper {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 48px;
+  margin-top: 48px; text-align: left;
+}
+.form-left { display: flex; flex-direction: column; justify-content: center; gap: 32px; }
+.form-left .cta-stats { justify-content: flex-start; margin-bottom: 0; }
+.form-contact-alt p { font-size: 0.9rem; color: var(--text2); margin-bottom: 12px; }
+.form-contact-links { display: flex; gap: 12px; margin-bottom: 8px; flex-wrap: wrap; }
+.form-contact-links .btn { font-size: 0.85rem; padding: 10px 20px; }
+
+.inquiry-form {
+  background: var(--bg2); border: 1px solid var(--border); border-radius: var(--radius);
+  padding: 36px; display: flex; flex-direction: column; gap: 18px;
+}
+.form-title {
+  font-size: 1.2rem; font-weight: 800; text-align: center;
+  margin-bottom: 4px; letter-spacing: -0.5px;
+}
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.form-group { display: flex; flex-direction: column; gap: 6px; }
+.form-group label {
+  font-size: 0.78rem; font-weight: 600; color: var(--text2);
+  text-transform: uppercase; letter-spacing: 0.5px;
+}
+.form-group input,
+.form-group select,
+.form-group textarea {
+  background: var(--bg3); border: 1px solid var(--border); border-radius: 8px;
+  padding: 12px 14px; font-size: 0.9rem; color: var(--text);
+  font-family: 'Inter', sans-serif; transition: border-color 0.2s;
+  width: 100%;
+}
+.form-group input::placeholder,
+.form-group textarea::placeholder { color: rgba(255,255,255,0.25); }
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none; border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(0,229,255,0.1);
+}
+.form-group select { cursor: pointer; appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%239898a8' d='M1.41 0L6 4.58 10.59 0 12 1.41l-6 6-6-6z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat; background-position: right 14px center;
+  padding-right: 36px;
+}
+.form-group select option { background: var(--bg2); color: var(--text); }
+.form-group textarea { resize: vertical; min-height: 80px; }
+.form-submit { width: 100%; margin-top: 4px; }
+.form-disclaimer {
+  font-size: 0.72rem; color: var(--text2); text-align: center; margin-top: -8px;
+}
+
 /* MOBILE */
 @media (max-width: 768px) {
   .mobile-toggle { display: block; }
@@ -579,6 +632,12 @@ body {
   .sbar { grid-template-columns: 60px 1fr 80px; }
   .refund-grid { grid-template-columns: 1fr; }
   .tier-split { grid-template-columns: 1fr; }
+  .form-wrapper { grid-template-columns: 1fr; gap: 32px; }
+  .form-left .cta-stats { justify-content: center; }
+  .form-left { text-align: center; }
+  .form-contact-links { justify-content: center; }
+  .form-row { grid-template-columns: 1fr; }
+  .inquiry-form { padding: 24px; }
   .footer-inner { flex-direction: column; gap: 8px; text-align: center; }
 }
 
