@@ -231,6 +231,37 @@ body {
 .savings-tagline { text-align: center; font-size: 0.95rem; color: var(--text2); }
 .savings-tagline strong { color: var(--accent); }
 
+/* MARKET STATS */
+.market-stats {
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-bottom: 48px;
+}
+.mstat {
+  background: var(--bg2); border: 1px solid var(--border); border-radius: var(--radius);
+  padding: 24px; text-align: center; transition: border-color 0.3s, transform 0.2s;
+}
+.mstat:hover { border-color: var(--accent); transform: translateY(-3px); }
+.mstat-accent { border-color: var(--accent); background: rgba(0,229,255,0.04); }
+.mstat-num {
+  display: block; font-size: 2rem; font-weight: 900; color: var(--accent);
+  letter-spacing: -1px; line-height: 1;
+}
+.mstat-label { display: block; font-size: 0.78rem; color: var(--text2); margin: 8px 0 6px; line-height: 1.4; }
+.mstat-source { display: block; font-size: 0.6rem; color: rgba(255,255,255,0.25); font-style: italic; }
+.market-gap {
+  display: flex; align-items: center; justify-content: center; gap: 24px;
+  padding: 40px; margin-bottom: 12px;
+  background: linear-gradient(135deg, rgba(0,229,255,0.06), rgba(124,58,237,0.06));
+  border: 1px solid var(--border); border-radius: var(--radius);
+  flex-wrap: wrap;
+}
+.gap-left, .gap-right { text-align: center; }
+.gap-num { display: block; font-size: 3rem; font-weight: 900; letter-spacing: -2px; }
+.gap-left .gap-num { color: var(--accent); }
+.gap-right .gap-num { color: var(--red); }
+.gap-label { display: block; font-size: 0.85rem; color: var(--text2); }
+.gap-vs { font-size: 1rem; color: var(--text2); font-weight: 500; }
+.gap-explain { text-align: center; font-size: 0.95rem; color: var(--text2); margin-bottom: 0; font-style: italic; }
+
 /* ADOPTION */
 .adopt-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-bottom: 48px; }
 .adopt-card {
@@ -365,6 +396,8 @@ body {
   .flow-step { max-width: 100%; }
   .how-split { grid-template-columns: 1fr; gap: 40px; }
   .cost-split { grid-template-columns: 1fr; }
+  .market-stats { grid-template-columns: repeat(2, 1fr); }
+  .gap-num { font-size: 2.2rem; }
   .adopt-grid { grid-template-columns: 1fr; }
   .roi-visual { flex-direction: column; }
   .roi-arrow-big { transform: rotate(90deg); }
